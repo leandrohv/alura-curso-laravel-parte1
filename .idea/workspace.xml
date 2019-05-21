@@ -19,17 +19,7 @@
     </execution>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/series/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -252,16 +242,15 @@
       <updated>1558386088450</updated>
       <workItem from="1558386090964" duration="7306000" />
       <workItem from="1558403923878" duration="4025000" />
-      <workItem from="1558444271023" duration="12386000" />
+      <workItem from="1558444271023" duration="12712000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23717000" />
+    <option name="totallyTimeSpent" value="24043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1347" y="27" width="1124" height="1053" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3877551" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
