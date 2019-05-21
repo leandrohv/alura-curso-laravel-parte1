@@ -4,7 +4,9 @@
 Adicionar Série
 @endsection
 @section('conteudo')
-<form action="" method="post">
+<form method="post">
+{{-- cross-site request forgery --}}
+    @csrf
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" class="form-control" name="nome" id="nome">
