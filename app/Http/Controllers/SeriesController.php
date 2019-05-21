@@ -24,11 +24,15 @@ class SeriesController extends Controller
 //        $series = Serie::all();
 
         // trazendo informações do banco de dados por ordem alfabética
-        $series = Serie::query()->orderBy('nome')->get();
+        $series = Serie::query()
+            ->orderBy('nome')
+            ->get();
+
+        $mensagem = $request->session()->get('mensagem');
 //        var_dump($series);
 //        exit();
 
-    return view('series.index', compact('series'));
+    return view('series.index', compact('series', 'mensagem'));
     }
 
     public function create()
@@ -49,8 +53,28 @@ class SeriesController extends Controller
 //        ]);
         $nome = $request->nome;
         $serie = Serie::create($request->all());
+        $request->session()
+//            ->put(
+            ->flash(
+                'mensagem',
+                "Série com id {$serie->id} criada: {$serie->nome}"
+            );
 
-        echo "Série com id {$serie->id} criada: {$serie->nome}";
+//        echo "Série com id {$serie->id} criada: {$serie->nome}";
+//        return redirect('/series');
+        return redirect()->route('listar_series');
 
+    }
+
+    public function destroy(Request $request)
+    {
+        Serie::destroy($request->id);
+        $request->session()
+            ->flash(
+                'mensagem',
+                "Série removida com sucesso!"
+            );
+//        return redirect('/series');
+        return redirect()->route('listar_series');
     }
 }
