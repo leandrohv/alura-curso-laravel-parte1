@@ -14,7 +14,6 @@ Adicionar Série
     </div>
 @endif
 <form method="post">
-{{-- cross-site request forgery --}}
     @csrf
     <div class="form-group">
         <label for="nome">Nome</label>
