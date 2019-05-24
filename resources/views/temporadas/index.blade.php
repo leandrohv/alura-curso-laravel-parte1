@@ -5,7 +5,7 @@
 @endsection
 
 @section('conteudo')
-    <a href="/series" class="btn btn-warning mb-2">Voltar</a>
+    <a href="/series" class="btn btn-secondary mb-2">Voltar</a>
     <ul class="list-group">
         @foreach ($temporadas as $temporada)
             <li class="list-group-item d-flex justify-content-between align-items-center">

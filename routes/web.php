@@ -29,3 +29,17 @@ Route::get('/series/{serieId}/temporadas', 'TemporadasController@index');
 /* Temporadas */
 Route::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
 Route::post('/temporadas/{temporada}/episodios/assistido', 'EpisodiosController@assistido');
+
+/* Auth */
+Route::get('/entrar', 'EntrarController@index');
+Route::post('/entrar', 'EntrarController@entrar');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+/* Registrar */
+Route::get('/registrar', 'RegistroController@create');
+Route::post('/registrar', 'RegistroController@store');
+
+

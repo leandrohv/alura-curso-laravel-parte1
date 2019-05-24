@@ -6,7 +6,7 @@
 
 @section('conteudo')
 @include('mensagem', ['mensagem' => $mensagem])
-    <a href="/series" class="btn btn-warning mb-2">Voltar</a>
+    <a href="/series" class="btn btn-secondary mb-2">Voltar</a>
     <form action="/temporadas/{{ $temporadaId }}/episodios/assistido" method="post">
         @csrf
         <ul class="list-group">
