@@ -14,7 +14,8 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-
+/* Rotas */
+/* Series */
 Route::get('/series', 'SeriesController@index')
         ->name('listar_series');
 Route::get('/series/criar', 'SeriesController@create');
@@ -24,3 +25,7 @@ Route::delete('/series/{id}', 'SeriesController@destroy');
 Route::post('/series/{id}/editaNome', 'SeriesController@edit');
 
 Route::get('/series/{serieId}/temporadas', 'TemporadasController@index');
+
+/* Temporadas */
+Route::get('/temporadas/{temporada}/episodios', 'EpisodiosController@index');
+Route::post('/temporadas/{temporada}/episodios/assistido', 'EpisodiosController@assistido');
